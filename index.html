@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymnastics Wordle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Assets/Gymnastle.png" type="image/png">
+</head>
+<body>
+    <header class="small-header">
+        <img src="Assets/Gymnastle Transparent.png" alt="Gymnastle Logo" class="small-logo">
+        <h1>Gymnastle - Gymnastics Wordle</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="sponsored-message">
+            <a href="https://orbitgymnasticsfoundation.org" target="_blank">
+                <img src="Assets/Orbit Foundation Logo and Banner.png" alt="Orbit Foundation Logo and Banner" class="banner">
+            </a>
+            <p>Sponsored by the Orbit Gymnastics Foundation. To learn more, check out <a href="https://orbitgymnasticsfoundation.org" target="_blank">orbitgymnasticsfoundation.org</a>.</p>
+        </div>
+
+        <div class="guess-box">
+            <h4>Guesses:</h4>
+            <p>Value: The value of the skill. A = 0.1, B = 0.2 and so on. The harder the skill, the higher the value</p>
+            <p>Event: The event of the skill</p>
+            <p>Group: Formally the element group, it is like the type of skill. For example, a swinging verses strength skill</p>
+            <div id="selected-skill-container"></div>
+
+            <p class="not-right">Even though you got all three green, this isn't the skill. You're very close, though!</p>
+
+            <div class="hint">
+                <button id="hint-button">Get a hint</button>
+                <div id="hint-text"></div>
+
+                <button id="reveal-button">Reveal Answer</button>
+            </div>
+        </div>
+
+        <div class="game-box">
+            <input type="text" id="skill-guess" placeholder="Enter your guess...">
+
+            <div id="finalize-input">
+                <div id="skill-image-container"></div>
+                <button id="submit-skill">Submit</button>
+            </div>
+
+            <div id="filter-div">
+                <input type="checkbox" id="filter-checkbox">
+                <label for="filter-checkbox">Show Only Viable Skills</label>
+            </div>
+
+            <div id="skills-container">
+                <!-- Skills will appear here as matches -->
+            </div>
+
+            <p id="explanation-text">Guess the gymnastics skill! You'll receive feedback based on the value, event, element group</p>
+        </div>
+
+        <div class="victory-box"></div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
