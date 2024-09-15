@@ -345,9 +345,19 @@ function compareEG(skill1, skill2) {
     }
 }
 
+function removeItemInPlace(list, itemToRemove) {
+    const index = list.indexOf(itemToRemove);
+    if (index > -1) {
+        list.splice(index, 1);
+    }
+}
+
 // Function to add a guess to the guess-box
 function addGuess(skill) {
-    guessCount += 1
+    guessCount += 1;
+
+    removeItemInPlace(skills, skill);
+    removeItemInPlace(viableSkills, skill);
 
     if (guessCount >= 2) {
         const revealButton = document.getElementById('reveal-button');
